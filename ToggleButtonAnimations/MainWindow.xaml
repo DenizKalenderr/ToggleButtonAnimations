@@ -1,0 +1,49 @@
+﻿<Window x:Class="ToggleButtonAnimations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToggleButtonAnimations"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Border CornerRadius="25" 
+	Height="50" Width="200" 
+	x:Name="BorderToggleButton" Background="#CCCCCC">
+
+
+            <ToggleButton Background="Transparent" Width="200" 
+		      Style="{StaticResource NoMouseOverStyle}"
+                          
+		      x:Name="BtnOnOff" 
+		      Click="BtnOnOff_Click">
+
+                <Grid Width="200" Height="50" 
+		      x:Name="GrdBtnContent" 
+		      VerticalAlignment="Center" 
+		      HorizontalAlignment="Center">
+
+                    <!-- dot -->
+                    <Border BorderBrush="White" 
+				CornerRadius="50" 
+				Height="40" Width="40" 
+				x:Name="BorderOnOffDot" 
+				Background="white" 
+				HorizontalAlignment="Left" 
+				Margin="5,0"/>
+
+                    <!-- button state -->
+                    <Label Content="offline" 
+			       Foreground="Black" FontSize="25" 
+			       x:Name="LblOnOff" 
+			       HorizontalAlignment="Center" 
+			       VerticalAlignment="Center" 
+			       FontWeight="Bold"/>
+
+                </Grid>
+
+            </ToggleButton>
+
+        </Border>
+    </Grid>
+</Window>
